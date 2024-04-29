@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Reveal Design</title>
+    <style>
+        html, body {
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff; /* Change this to the background color you want */
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .liquid-reveal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Change this to the liquid color */
+            animation: liquidReveal 3s ease-in-out forwards;
+            z-index: 3;
+            mix-blend-mode: screen;
+            opacity: 0;
+        }
+
+        @keyframes liquidReveal {
+            0% {
+                opacity: 1;
+                transform: scaleY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="images (4).jpg" alt="Image not found">
+    </div>
+    <div class="overlay">
+        Liquid design reveal
+    </div>
+    <div class="liquid-reveal"></div>
+
+    <script>
+        // JavaScript can be added here if needed
+    </script>
+</body>
+</html>
